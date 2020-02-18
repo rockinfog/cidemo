@@ -20,7 +20,9 @@ namespace cidemo
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    .UseUrls("http://localhost:5555")
+                    .UseStartup<Startup>();
                 });
     }
 }
